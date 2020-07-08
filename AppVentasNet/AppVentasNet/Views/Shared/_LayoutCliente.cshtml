@@ -7,7 +7,7 @@
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-<link href="~/Content/EstilosMenu/StyleMenu.css" rel="stylesheet" />
+    <link href="~/Content/EstilosMenu/StyleMenu.css" rel="stylesheet" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -29,7 +29,51 @@
             </div>
         </div>
     </div>
- 
+    @*Menu Inicio*@
+
+    <div class="sidebar-container">
+        <div class="sidebar-logo">
+            Clientes
+        </div>
+        <ul class="sidebar-navigation">
+            <li class="header">Navigation</li>
+            <li>
+                <a href="#">
+                    <span class="glyphicon glyphicon-home"></span>
+                    <i class="fa fa-home" aria-hidden="true"></i> Inicio
+                </a>
+            </li>
+            <li>
+                <a href="~/Clientes/Index">
+                    <span class="glyphicon glyphicon-list-alt"></span>
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>Lista de Clientes
+                </a>
+            </li>
+            <li>
+                <a href="~/Clientes/Registrar">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>Registrar Clientes
+                </a>
+            </li>
+            <li class="header"><b>REPORTES</b></li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-users" aria-hidden="true"></i> Friends
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-cog" aria-hidden="true"></i> Settings
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i> Information
+                </a>
+            </li>
+        </ul>
+    </div>
+    @*Menu Fin*@
 
     <div class="content-container">
         <div class="container-fluid">

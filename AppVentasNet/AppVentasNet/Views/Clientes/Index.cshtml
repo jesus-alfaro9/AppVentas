@@ -1,0 +1,41 @@
+﻿@model IEnumerable<AppVentasNet.Models.Cliente>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+}
+<link href="~/Content/EstilosMenu/MyStyle.css" rel="stylesheet" />
+<div class="row">
+    <h2>Clientes</h2>
+</div>
+ 
+<div class="row">
+
+    <table class="table table-hover">
+        <thead>
+            <tr id="tCabecera">
+                <th scope="col">@Html.Label("N°")</th>
+                <th scope="col">@Html.Label("Nombre de la Compañia")</th>
+                <th scope="col">@Html.Label("Direccion")</th>
+                <th scope="col">@Html.Label("Ciudad")</th>
+                <th scope="col">@Html.Label("País")</th>
+                <th scope="col">@Html.Label("Teléfono")</th>
+                <th scope="col">@Html.Label("Mantenimeinto")</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.IdCliente</td>
+                    <td>@item.NombreCompañia</td>
+                    <td>@item.Direccion</td>
+                    <td>@item.Ciudad</td>
+                    <td>@item.País</td>
+                    <td>@item.Telefono</td>
+                    <td>@Html.ActionLink("Actualizar", "#", "#", null, new { @class = "btn btn-info" }) || @Html.ActionLink("Eliminar", "", "", null, new { @class = "btn btn-danger" })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

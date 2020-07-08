@@ -1,0 +1,61 @@
+﻿@model AppVentasNet.Models.Cliente
+@{
+    ViewBag.Title = "Registrar";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+}
+    <div class="row">
+        <h2>Registrar Cliente </h2>
+    </div>
+<hr />
+        <div class="row">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IdCliente,new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.IdCliente, new { @class="form-control",@placeholder="Codigo"})
+                        @Html.ValidationMessageFor(model => model.IdCliente)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NombreCompañia, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.NombreCompañia,new { @class="form-control",@placeholder="Razón Social"})
+                        @Html.ValidationMessageFor(model => model.NombreCompañia)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Direccion, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.NombreCompañia,new { @class="form-control",@placeholder="Dirección"})
+                        @Html.ValidationMessageFor(model => model.NombreCompañia)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Ciudad, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Ciudad,new {@class="form-control",@placeholder="Ciudad" })
+                        @Html.ValidationMessageFor(model => model.Ciudad)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.País, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.País, new { @class="form-control",@placeholder="País" })
+                        @Html.ValidationMessageFor(model => model.País)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Telefono, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Telefono, new {@class="form-control",@placeholder="Teléfono" })
+                        @Html.ValidationMessageFor(model => model.Telefono)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="name" value="Registrar" class="btn btn-primary" />
+                </div>
+
+            }
+        </div>
+
